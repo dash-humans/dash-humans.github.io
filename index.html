@@ -1,1 +1,42 @@
-Hello World
+<!doctype html>
+<html>
+    <script type="application/javascript">
+        
+        var step = 0;
+        
+        function change()
+        {
+            var freq = Math.PI / 500;
+            
+            var r = Math.round(Math.sin(freq * step + 0) * 50 + 128);
+            var g = Math.round(Math.sin(freq * step + 2) * 50 + 128);
+            var b = Math.round(Math.sin(freq * step + 4) * 50 + 128);
+            
+            var color = "rgb(" + r + "," + g + "," + b + ")";
+            
+            document.body.style.background = color;
+            step++;
+        }
+        
+        function load()
+        {
+            window.open("https://dash-humans.github.io/index.html", "_self")
+        }
+        
+    </script>
+    <body bgcolor='#95a5a6' onload="setInterval(change, 1)">
+        <meta charset="UTF-8">
+        
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+        <style type="text/css">
+    		h1{ font-family: 'Droid Sans', sans-serif; }
+    		p{ font-family: 'Droid Sans', sans-serif;}
+    	</style>
+        <font color="white">
+            
+        <title>dash-humans</title>
+        <center>
+            <h1 onclick="load()">Hello World!</h1>
+        </center>
+    </body>
+</html>
